@@ -219,7 +219,7 @@ setMethod("dbReadTable", "JDBCConnection", def=function(conn, name, ...)
 setMethod("dbDataType", signature(dbObj="JDBCConnection", obj = "ANY"),
           def = function(dbObj, obj, ...) {
             if (is.integer(obj)) "INTEGER"
-            else if (is.numeric(obj)) "DOUBLE PRECISION"
+            else if (is.numeric(obj)) "DOUBLE"
             else "VARCHAR(255)"
           }, valueClass = "character")
 
